@@ -10,10 +10,17 @@ import { EventsService } from '../events.service';
 export class DescriptionComponent implements OnInit {
   eventService: EventsService;
 
-  constructor() { }
+  constructor() { console.log("description >>>>> Constructor"); }
 
   ngOnInit() {
-    this.eventService.getEventDetails(this.event.ID).subscribe(event => this.event = event);
+    
+  }
+
+  getEventDetails():void
+  {
+    console.log("description >>>>> ngOnInit");
+    if(this.event.ID)
+      this.eventService.getEventDetails(this.event.ID).subscribe(event => this.event = event);
   }
 
   @Input() event:Event

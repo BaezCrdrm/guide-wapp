@@ -33,8 +33,7 @@ export class EventsService {
     var self = this;
     var _url: string = this.apiBaseUrl + "req_events.php";
     var a = this.httpClient.get<any[]>(_url);
-    console.log("getEvents >>>>>>>>>");
-    var tempObCol = new Observable<Event[]>();
+    // console.log("getEvents >>>>>>>>>");
     var ev: Event[] = [];
         
     a.forEach(e => {
@@ -49,6 +48,21 @@ export class EventsService {
 
   getEventDetails(id): Observable<Event>
   {
+    var self = this;
+    var _url: string = this.apiBaseUrl + "req_events.php?ev_id=" + id;
+    var a = this.httpClient.get<any[]>(_url);
+    console.log("getEventDetails >>>>>>>>>");
+    var tempObCol = new Observable<Event>();
+    var ev: Event = new Event();
+        
+    a.forEach(e => {
+      console.log("a");
+      console.log(e);
+      // e.forEach(obj => {
+      //   // console.log(obj);
+        
+      // });
+    });
     
     return null;
   } 
