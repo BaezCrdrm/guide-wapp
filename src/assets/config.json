@@ -1,0 +1,11 @@
+{
+    "service":
+    {
+        "guide-api-url": "http://18.221.160.127/guide-ws/service/scripts/rest/",
+        "guide-api-action-files": [
+            { "name": "events", "file": "req_events.php" },
+            { "name": "channel", "file": "req_channel.php" },
+            { "name": "events", "file": "req_eventChannelList.php" }
+        ]
+    }
+}
