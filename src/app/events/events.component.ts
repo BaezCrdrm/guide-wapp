@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../models/models';
 import { EventsService } from '../events.service';
+import { ChannelsListService } from '../channels-list.service';
 
 
 @Component({
@@ -14,7 +15,8 @@ export class EventsComponent implements OnInit {
   events: Event[];
   selectedEvent: Event;
   config;
-  constructor(private eventService: EventsService) {  }
+  constructor(private eventService: EventsService, 
+    private channelsService: ChannelsListService) {  }
 
   ngOnInit() {
     this.getEventsList();
@@ -23,7 +25,16 @@ export class EventsComponent implements OnInit {
 
   getEventsList():void{
     // Convierte Observable a "lista"
-    this.eventService.getEventsList().subscribe(events => this.events = events);
+    this.eventService.getEventsList().
+      subscribe(events => this.events = events);
+  }
+
+  getEventChannelList():void
+  {
+    // console.log("getEventChannelList   >>>>>>>> ");
+    if(this.selectedEvent.ID)
+      this.channelsService.getChannelsList(this.selectedEvent.ID).
+        subscribe(ch => this.selectedEvent.List = ch);
   }
 
   // showConfig() {
@@ -37,6 +48,10 @@ export class EventsComponent implements OnInit {
   onSelectEvent(event:Event): void
   {
     this.selectedEvent = event;
-    console.log("entro");
+    console.log("Current info");
+    // console.log(this.selectedEvent);
+    this.getEventChannelList();
+
+    console.log(this.selectedEvent);
   }
 }

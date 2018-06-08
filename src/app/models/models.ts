@@ -33,6 +33,7 @@ export class Channel
     ID: number;
     Name: string;
     Abv: string;
+    Img: string;
     Url: string;
 
     constructor() {}

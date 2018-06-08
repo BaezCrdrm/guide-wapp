@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Event} from './models/models';
+import { Event, Channel } from './models/models';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
@@ -22,7 +22,7 @@ export class EventsService {
     var self = this;
     var a = this.httpClient.get(this.configUrl);
     a.forEach(e => {
-      console.log(e['service']['guide-api-url'].toString());
+      // console.log(e['service']['guide-api-url'].toString());
       var _url: string = e['service']['guide-api-url'].toString();
       self.apiBaseUrl = _url;
     });
@@ -48,16 +48,17 @@ export class EventsService {
 
   getEventDetails(id): Observable<Event>
   {
+    // console.log("getEventDetails   >>>>>>>>>>>>");
     var self = this;
-    var _url: string = this.apiBaseUrl + "req_events.php?ev_id=" + id;
+    var _url: string = this.apiBaseUrl + "req_events.php?evId=" + id;
     var a = this.httpClient.get<any[]>(_url);
-    console.log("getEventDetails >>>>>>>>>");
+    // console.log("getEventDetails >>>>>>>>>");
     var tempObCol = new Observable<Event>();
     var ev: Event = new Event();
         
     a.forEach(e => {
-      console.log("a");
-      console.log(e);
+      // console.log("a => e");
+      // console.log(e);
       // e.forEach(obj => {
       //   // console.log(obj);
         
@@ -65,7 +66,7 @@ export class EventsService {
     });
     
     return null;
-  } 
+  }
 
   private getItemsFormat(e:Object): Event
   {
@@ -77,8 +78,8 @@ export class EventsService {
     obj.EndSch = e['ev_sch_end'];
     obj.EventType.ID = e['tp_id'];
     obj.EventType.Name = e['tp_name'];
-    // obj.List: object[];
-    // obj.Url = e['ev_url'];
+    // obj.List: Channel[];
+    obj.Url = e['ev_url'];
 
     return obj;
   }
