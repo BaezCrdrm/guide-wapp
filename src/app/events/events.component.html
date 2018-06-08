@@ -1,22 +1,30 @@
+<div class="bg-dark text-white py-5">
 <h2>Eventos</h2>
-<ul class="events">
-  <li *ngFor="let event of events" (click)="onSelectEvent(event)">
-    <!-- <span class="badge">{{event.ID}}</span> {{event.Name}} -->
+</div>
 
-    <div id="event_{{event.ID}}">
-      <div class="img_channel"></div>
+  <div class="row">
+    <div class="col-sm">
+        <ul class="events">
+            <li *ngFor="let event of events" (click)="onSelectEvent(event)">
+              <!-- <span class="badge">{{event.ID}}</span> {{event.Name}} -->
 
-      <div>
-        <div>
-          <h2 class="event_title">{{event.Name}}</h2>
-        </div>
+              <div id="event_{{event.ID}}">
+                <div class="img_channel"></div>
 
-        <div>
-          <span class="event_desc">{{event.Description}}</span>
-        </div>
+                <div>
+                  <div>
+                    <h2 class="event_title">{{event.Name}}</h2>
+                  </div>
+
+                  <div>
+                    <span class="event_desc">{{event.Description}}</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+        </ul>
       </div>
-    </div>
-  </li>
-</ul>
-
-<app-description [event]="selectedEvent"></app-description>
+      <div class="col-sm">
+          <app-description [event]="selectedEvent"></app-description>
+        </div>
+  </div>
