@@ -1,4 +1,5 @@
-<div *ngIf="event">
-  <h2>{{event.Name}}</h2>
-  <div>{{event.Name}} tiene el ID '{{event.ID}}'</div>
+<div class="bg-light text-dark container-fluid" *ngIf="event" >
+  <h2> <span>Evento: </span> {{event.Name | uppercase }} </h2>
+  <div><!--{{event.Name}}--> <span> Tiene el ID:  </span>'{{event.ID}}'</div>
+ <!-- <button (click)="goBack()">Atras</button>  para un futuro,si no se usa... se quita--> 
 </div>

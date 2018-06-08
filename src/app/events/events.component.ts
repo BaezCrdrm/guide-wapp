@@ -37,5 +37,6 @@ export class EventsComponent implements OnInit {
   onSelectEvent(event:Event): void
   {
     this.selectedEvent = event;
+    console.log("entro");
   }
 }

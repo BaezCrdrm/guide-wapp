@@ -1,0 +1,25 @@
+/* Events exclusive CSS styles */
+.event_title {
+    background-color: rgb(193, 13, 13) !important;
+    color:#FFF; /* Old browsers */
+    font-family: "fwc" !important;
+    width: 50%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @font-face {
+    font-family: 'fwc';
+    src: url("/assets/Dusha.ttf");
+  }

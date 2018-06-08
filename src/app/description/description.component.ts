@@ -8,9 +8,12 @@ import { EventsService } from '../events.service';
   styleUrls: ['./description.component.css']
 })
 export class DescriptionComponent implements OnInit {
+ 
+  
   eventService: EventsService;
+  
 
-  constructor() { console.log("description >>>>> Constructor"); }
+  constructor() { console.log("description >>>>> Constructor", console.log('entro' !!)); }
 
   ngOnInit() {
     

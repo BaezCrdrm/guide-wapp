@@ -7,6 +7,11 @@ import { EventsComponent } from './events/events.component';
 import { FormsModule } from '@angular/forms';
 import { DescriptionComponent } from './description/description.component'; // <-- NgModel lives here
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'description', component: DescriptionComponent }
+];
 
 @NgModule({
   declarations: [
@@ -16,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(routes),
     FormsModule,
     HttpClientModule
   ],
