@@ -9,7 +9,7 @@ import { Observable, of } from 'rxjs';
 export class ChannelsListService {
   configUrl = "./assets/config.json";
   apiBaseUrl:string = "http://18.221.160.127/guide-ws/service/scripts/rest/";
-  private _channels: Channel[] = [];
+  private _channels: Channel[];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,6 +17,7 @@ export class ChannelsListService {
   {
     // console.log("getChannelsList   >>>>>>>>>>>>");
     var self = this;
+    this._channels = [];
     var _url: string = this.apiBaseUrl + "req_eventChannelList.php?evId=" + id;
     var a = this.httpClient.get<any[]>(_url);
     var ch: Channel = new Channel();

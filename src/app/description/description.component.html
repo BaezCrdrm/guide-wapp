@@ -1,5 +1,32 @@
 <div class="bg-light text-dark container-fluid" *ngIf="event" >
-  <h2> <span>Evento: </span> {{event.Name | uppercase }} </h2>
-  <div><!--{{event.Name}}--> <span> Tiene el ID:  </span>'{{event.ID}}'</div>
- <!-- <button (click)="goBack()">Atras</button>  para un futuro,si no se usa... se quita--> 
+ <!-- <button (click)="goBack()">Atras</button>  para un futuro,si no se usa... se quita-->
+ <input type="hidden" value="{{event.ID}}" />
+  
+  <div class="event-basic-info">
+    <div>
+      <img />
+
+      <div>
+        <p id="event-title">{{event.Name}}</p>
+        <p class="event-schedule">{{event.StartSch}}</p>
+      </div>
+    </div>
+
+    <div>
+      <p>Aprox {{event.EndSch}}</p>
+      <p>{{event.Description}}</p>      
+    </div>
+  </div>
+
+  <div class="event-channels-list">
+    <ul>
+      <li *ngFor="let channel of event.List">
+        <div>
+          <img class="eventImg" src="{{channel.Img}}" />
+
+          <p>{{channel.Name}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
