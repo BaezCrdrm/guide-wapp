@@ -3,8 +3,8 @@ export class Event
     ID: string;
     Name: string;
     Description: string;
-    StartSch: any;
-    EndSch: any;
+    StartSch: Date;
+    EndSch: Date;
     EventType: EventType;
     List: Channel[];
     Url: string;

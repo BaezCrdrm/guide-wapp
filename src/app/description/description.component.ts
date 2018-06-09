@@ -8,8 +8,8 @@ import { EventsService } from '../events.service';
   styleUrls: ['./description.component.css']
 })
 export class DescriptionComponent implements OnInit {
-  eventService: EventsService;  
-
+  eventService: EventsService;
+  
   constructor() { console.log("description >>>>> Constructor", console.log('entro' !!)); }
 
   ngOnInit() {
@@ -17,5 +17,9 @@ export class DescriptionComponent implements OnInit {
   }
 
   @Input() event:Event
+
+  @Input('eventDuration') eventDuration: any;
+
+  @Input('timeCDFormat') timeFormat: string;
 
 }

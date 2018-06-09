@@ -31,10 +31,9 @@ export class EventsService {
   getEventsList(): Observable<Event[]>
   {
     var self = this;
-    var _url: string = this.apiBaseUrl + "req_events.php";
-    var a = this.httpClient.get<any[]>(_url);
+    let _url: string = this.apiBaseUrl + "req_events.php";
+    let a = this.httpClient.get<any[]>(_url);
     // console.log("getEvents >>>>>>>>>");
-    var ev: Event[] = [];
         
     a.forEach(e => {
       e.forEach(obj => {
@@ -51,7 +50,7 @@ export class EventsService {
     // console.log("getEventDetails   >>>>>>>>>>>>");
     var self = this;
     var _url: string = this.apiBaseUrl + "req_events.php?evId=" + id;
-    var a = this.httpClient.get<any[]>(_url);
+    let a = this.httpClient.get<any[]>(_url);
     // console.log("getEventDetails >>>>>>>>>");
     var tempObCol = new Observable<Event>();
     var ev: Event = new Event();
@@ -74,8 +73,14 @@ export class EventsService {
     obj.ID = e['ev_id'];
     obj.Name = e['ev_name'];
     obj.Description = e['ev_des'];
-    obj.StartSch = e['ev_sch'];
-    obj.EndSch = e['ev_sch_end'];
+    // obj.StartSch = e['ev_sch'];
+    let tempDate = new Date(e['ev_sch']);
+    obj.StartSch = tempDate;
+
+    tempDate = new Date(e['ev_sch_end']);
+    //obj.EndSch = e['ev_sch_end'];
+    obj.EndSch = tempDate;
+
     obj.EventType.ID = e['tp_id'];
     obj.EventType.Name = e['tp_name'];
     // obj.List: Channel[];

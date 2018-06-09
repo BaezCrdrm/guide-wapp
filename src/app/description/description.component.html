@@ -4,7 +4,15 @@
   
   <div class="event-basic-info">
     <div>
-      <img />
+      <div id="div-type-img">
+        <img *ngIf="event.EventType.ID==1" src="./assets/img/americanogrande_rect.png" />
+        <img *ngIf="event.EventType.ID==2" src="./assets/img/soccergrande_rect.png" />
+        <img *ngIf="event.EventType.ID==3" src="./assets/img/basketballgrande_rect.png" />
+        <img *ngIf="event.EventType.ID==4" src="./assets/img/baseballgrande_rect.png" />
+        <img *ngIf="event.EventType.ID==5" src="./assets/img/musicagrande_rect.png" />
+        <img *ngIf="event.EventType.ID==6" src="./assets/img/premiosgrande_rect.png" />
+        <img *ngIf="event.EventType.ID==7" src="" />
+      </div>
 
       <div>
         <p id="event-title">{{event.Name}}</p>
@@ -13,7 +21,7 @@
     </div>
 
     <div>
-      <p>Aprox {{event.EndSch}}</p>
+      <p>Aprox <span>{{eventDuration}}</span> {{timeFormat}}</p>
       <p>{{event.Description}}</p>      
     </div>
   </div>

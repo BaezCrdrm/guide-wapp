@@ -6,10 +6,18 @@
     <div class="col-sm">
         <ul class="events">
             <li *ngFor="let event of events" (click)="onSelectEvent(event)">
-              <!-- <span class="badge">{{event.ID}}</span> {{event.Name}} -->
+              <!-- <span class="badge">{{event.ID}}</span> {{event.EventType.ID}} -->
 
               <div id="event_{{event.ID}}">
-                <div class="img_channel"></div>
+                <div class="div-type-img">
+                  <img *ngIf="event.EventType.ID==1" src="./assets/img/americano.png" />
+                  <img *ngIf="event.EventType.ID==2" src="./assets/img/soccer.png" />
+                  <img *ngIf="event.EventType.ID==3" src="./assets/img/basketball.png" />
+                  <img *ngIf="event.EventType.ID==4" src="./assets/img/baseball.png" />
+                  <img *ngIf="event.EventType.ID==5" src="./assets/img/musica.png" />
+                  <img *ngIf="event.EventType.ID==6" src="./assets/img/premios.png" />
+                  <img *ngIf="event.EventType.ID==7" src="./assets/img/gen.png" />
+                </div>
 
                 <div>
                   <div>
@@ -25,6 +33,6 @@
         </ul>
       </div>
       <div class="col-sm">
-          <app-description [event]="selectedEvent"></app-description>
+          <app-description [event]="selectedEvent" [eventDuration]="calculatedDuration" [timeCDFormat]="timeCDFormat"></app-description>
         </div>
   </div>
