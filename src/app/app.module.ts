@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'description', component: DescriptionComponent }
+  { path: 'Eventos', component: EventsComponent }
 ];
 
 @NgModule({

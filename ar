@@ -1,0 +1,71 @@
+[33mcommit f4fffbd21290594b9ef9132edbc3d36a86a52ff6[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m)[m
+Author: CesarArt <arturo_inter8@hotmail.com>
+Date:   Thu Jun 7 23:01:33 2018 -0500
+
+    se agrego typografia en el css de componente evento, ademas de agregar por medio de bootstrap agregando stylesheet en index.html para los row y col-sm en events.component.html
+
+[33mcommit 15023484c8f34109078e1e81fb29cd5827061f9e[m[33m ([m[1;31morigin/dev[m[33m)[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 13:59:49 2018 -0500
+
+    estructura obtener datos detalles
+
+[33mcommit 4e4d2d2b9da5f04eb59340ec4f5a8c88353ac7b3[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 13:28:21 2018 -0500
+
+    Update readme
+
+[33mcommit 792531148e0425ad8d27991e0662e455074ceb56[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 13:06:35 2018 -0500
+
+    fix v1
+
+[33mcommit 69cd5debace9e53d5c674107d1f6c990d71788f9[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 13:00:55 2018 -0500
+
+    Componente Detalles de evento
+
+[33mcommit ab0d1026797f7df618cdd7ecd2db698f77a2089f[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 13:00:18 2018 -0500
+
+    componente eventos
+
+[33mcommit 6a1caa73022fec99c462100cca1a892ddc089164[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 12:59:45 2018 -0500
+
+    Componente app
+
+[33mcommit 5927ccd76f28882e68ed3571ee896a56949831f7[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 12:58:50 2018 -0500
+
+    Servicio
+
+[33mcommit e5835583976ef446cdadb195c46d26b7a21735fd[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 12:58:16 2018 -0500
+
+    Mock eventos (pruebas offline - tutorial)
+
+[33mcommit f6dd14f458017fc45684867afd1c794805516299[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 12:57:28 2018 -0500
+
+    Modelos
+
+[33mcommit 9e6074efd695127d30651a586ed767dd6be0f282[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Wed Jun 6 12:56:59 2018 -0500
+
+    Primer commit
+
+[33mcommit c6eccdd749fcdefdaeae49f1b281cd729622813a[m
+Author: BaezCrdrm <dev.baez_crdrm@outlook.com>
+Date:   Mon Jun 4 19:02:12 2018 -0500
+
+    initial commit

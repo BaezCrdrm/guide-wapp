@@ -1,6 +1,37 @@
-<div class=container>
+<div class="container mx-auto" >
     <h1>{{title}}</h1>
 </div>
+<div class="barmenu">
+    <div class="row">
+        <div class="toggle-btn" (click)="Sidevar()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </div>
+    <div class="row">
+      <h2 class="mx-auto text-white">Detalles del evento</h2> <!-- Estan en prueba los margenes-->
+    </div>
+</div>
+<div id="sidebar">
+    
+    <ul>
+        <img  src="./assets/img/guianova2.png" class="img-thumbnail" />
+        <li class="border-bottom">Todos</li>
+        <li>Deportes</li>
+        <li>Futbol Americano</li>
+        <li>
+                <a class="nav-link" [routerLink]="['/Eventos']" (click)="Sidevar()" >Futbol Soccer</a>
+        </li>
+        <li>Basketball</li>
+        <li class="border-bottom">Baseball</li>
+        <li>Especiales</li>
+        <li>Conciertos</li>
+        <li>Premios</li>
+        <li>Otros</li>
+    </ul>
 
-<app-events></app-events>
+</div>
+<!--<app-events></app-events>-->
+
 <router-outlet></router-outlet>
