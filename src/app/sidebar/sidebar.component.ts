@@ -11,9 +11,8 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   }
-  Sidevar(){
- 
+  
+  Sidebar(){
     document.getElementById('sidebar').classList.toggle('active');
-
   }
 }

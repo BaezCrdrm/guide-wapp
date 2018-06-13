@@ -16,7 +16,7 @@ import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
   { path: '',component: InicioComponent ,pathMatch: 'full' },
-  { path: 'Eventos', component: EventsComponent },
+  { path: 'Eventos/:type', component: EventsComponent },
   { path: 'des', component: DescriptionComponent},
   { path: '**',redirectTo: '/' ,pathMatch: 'full' },
   

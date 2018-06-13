@@ -1,23 +1,35 @@
-<div id="sidebar">
-    
+<div id="sidebar">    
     <ul>
-       <a class="nav-link" [routerLink]="['/']" (click)="Sidevar()" > <img  src="./assets/img/guianova2.png"  class="img-thumbnail"  /></a>
+        <a class="nav-link" [routerLink]="['/']" (click)="Sidebar()" >
+            <img  src="./assets/img/guianova2.png"  class="img-thumbnail"  /></a>
     
 
         <li class="Border">
-            <a>Todos...</a>
+            <a class="nav-link" [routerLink]="['Eventos', 0]" (click)="Sidebar()" >Todos</a>
         </li>
+
         <h6 class="">Deportes</h6>
-        <li class="">Futbol Americano</li>
-        <li >
-                <a class="nav-link" [routerLink]="['Eventos']" (click)="Sidevar()" >Futbol Soccer</a>
+        <li class="">
+            <a class="nav-link" [routerLink]="['Eventos', 1]" (click)="Sidebar()" >Futbol Americano</a>
         </li>
-        <li> Basketball</li>
-        <li class="Border">Baseball</li>
-        <li>Especiales</li>
-        <li>Conciertos</li>
-        <li>Premios</li>
-        <li>Otros</li>
-    </ul>
-  
+        <li >
+            <a class="nav-link" [routerLink]="['Eventos', 2]" (click)="Sidebar()" >Futbol Soccer</a>
+        </li>
+        <li>
+            <a class="nav-link" [routerLink]="['Eventos', 3]" (click)="Sidebar()" >Basketball</a>
+        </li>
+
+        <li class="Border">
+            <a class="nav-link" [routerLink]="['Eventos', 4]" (click)="Sidebar()" >Baseball</a>
+        </li>
+        <li>
+            <a class="nav-link" [routerLink]="['Eventos', 5]" (click)="Sidebar()" >Conciertos</a>
+        </li>
+        <li>
+            <a class="nav-link" [routerLink]="['Eventos', 6]" (click)="Sidebar()" >Premios</a>
+        </li>
+        <li>
+            <a class="nav-link" [routerLink]="['Eventos', 7]" (click)="Sidebar()" >Otros</a>
+        </li>
+    </ul>  
 </div>

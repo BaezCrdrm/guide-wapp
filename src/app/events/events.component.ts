@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Event } from '../models/models';
 import { EventsService } from '../events.service';
 import { ChannelsListService } from '../channels-list.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-events',
@@ -9,6 +10,8 @@ import { ChannelsListService } from '../channels-list.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent implements OnInit {
+  private sub: any;
+  type:number;
   events: Event[];
   selectedEvent: Event;
   calculatedDuration: any;
@@ -16,7 +19,8 @@ export class EventsComponent implements OnInit {
   config;
 
   constructor(private eventService: EventsService, 
-    private channelsService: ChannelsListService) { this.timeCDFormat = "minutos"; }
+    private channelsService: ChannelsListService,
+    private route: ActivatedRoute) { this.timeCDFormat = "minutos"; }
 
   ngOnInit() {
     this.getEventsList();
@@ -35,8 +39,17 @@ export class EventsComponent implements OnInit {
   }
 
   private getEventsList():void{
+    // https://angular-2-training-book.rangle.io/handout/routing/routeparams.html
+    this.sub = this.route.params.subscribe(params => {
+      this.type = +params['type'];
+    });
+
+    if(this.type == 0) {
+      this.type = null;
+    }
+
     // Convierte Observable a "lista"
-    this.eventService.getEventsList().
+    this.eventService.getEventsList(this.type).
       subscribe(events => this.events = events);
   }
 

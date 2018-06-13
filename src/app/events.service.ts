@@ -28,10 +28,11 @@ export class EventsService {
     });
   }
 
-  getEventsList(): Observable<Event[]>
+  getEventsList(type = null): Observable<Event[]>
   {
     var self = this;
-    let _url: string = this.apiBaseUrl + "req_events.php";
+    let _url: string = this.apiBaseUrl + "req_events.php?tpId=" + type;
+    console.log(_url);
     let a = this.httpClient.get<any[]>(_url);
     // console.log("getEvents >>>>>>>>>");
         
