@@ -1,8 +1,9 @@
-<div class="bg-dark text-white py-5">
+<div class="text-secundary">
 <h2>Eventos</h2>
 </div>
 
-  <div class="row">
+  <div class="row container" >
+     
     <div class="col-sm">
         <ul class="events">
             <li *ngFor="let event of events" (click)="onSelectEvent(event)">
@@ -40,7 +41,9 @@
             </li>
         </ul>
       </div>
-      <div class="col-sm">
+      <div class="col">
+        
           <app-description [event]="selectedEvent" [eventDuration]="calculatedDuration" [timeCDFormat]="timeCDFormat"></app-description>
+      
         </div>
   </div>

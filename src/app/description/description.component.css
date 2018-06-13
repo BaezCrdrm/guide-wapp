@@ -24,10 +24,10 @@
 
         .div-title-sch {
             width: 70%;
-            /* position: absolute; */
+            position: absolute; 
             right: 10px;
             float: right;
-            top:400px;
+            top:380px;
 
             z-index: 5;
             color: var(--main-text-dark-color);
