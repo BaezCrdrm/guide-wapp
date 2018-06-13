@@ -3,24 +3,24 @@
  <input type="hidden" value="{{event.ID}}" />
   
   <div class="event-basic-info">
-    <div>
-      <div id="div-type-img">
-        <img *ngIf="event.EventType.ID==1" src="./assets/img/americanogrande_rect.png" />
+    <div class="div-img-title">
+      <div class="div-type-img">
+        <!-- <img *ngIf="event.EventType.ID==1" src="./assets/img/americanogrande_rect.png" />
         <img *ngIf="event.EventType.ID==2" src="./assets/img/soccergrande_rect.png" />
         <img *ngIf="event.EventType.ID==3" src="./assets/img/basketballgrande_rect.png" />
         <img *ngIf="event.EventType.ID==4" src="./assets/img/baseballgrande_rect.png" />
         <img *ngIf="event.EventType.ID==5" src="./assets/img/musicagrande_rect.png" />
         <img *ngIf="event.EventType.ID==6" src="./assets/img/premiosgrande_rect.png" />
-        <img *ngIf="event.EventType.ID==7" src="" />
+        <img *ngIf="event.EventType.ID==7" src="" /> -->
       </div>
 
-      <div>
+      <div class="div-title-sch">
         <p id="event-title">{{event.Name}}</p>
         <p class="event-schedule">{{event.StartSch}}</p>
       </div>
     </div>
 
-    <div>
+    <div class="div-dur-desc">
       <p>Aprox <span>{{eventDuration}}</span> {{timeFormat}}</p>
       <p>{{event.Description}}</p>      
     </div>
@@ -29,10 +29,20 @@
   <div class="event-channels-list">
     <ul>
       <li *ngFor="let channel of event.List">
-        <div>
-          <img class="eventImg" src="{{channel.Img}}" />
+        <div class="div-channel">
+          <table>
+            <tr>
+              <td>
+                <div class="div-channel-img">
+                  <img src="{{channel.Img}}" />
+                </div>
+                </td>
 
-          <p>{{channel.Name}}</p>
+              <td>
+                <p class="channel-title">{{channel.Name}}</p>
+              </td>
+            </tr>
+          </table>
         </div>
       </li>
     </ul>

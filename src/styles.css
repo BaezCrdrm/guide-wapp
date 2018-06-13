@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --main-text-dark-color: #333333;
+    --sec-text-dark-color: #666666;
     --sec-text-gray-color: #999999;
 }
 
