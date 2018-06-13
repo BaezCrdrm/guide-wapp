@@ -1,0 +1,116 @@
+/* Events exclusive CSS styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.event-basic-inf {
+    width: 100%;
+    position: relative;
+}
+
+    .div-img-title {
+        width: 100%;
+        /* position: static; */
+    }
+
+        .div-type-img {
+            height: 80%;
+            width: auto;
+
+            /* position: absolute; */
+            z-index: 1;
+        }
+
+        .div-title-sch {
+            width: 70%;
+            position: absolute; 
+            right: 10px;
+            float: right;
+            top:380px;
+
+            z-index: 5;
+            color: var(--main-text-dark-color);
+        }
+
+            #event-title {
+                font-size: 30px;
+            }
+
+    .div-dur-desc {
+        width: 100%;
+        clear: both;
+
+        position: relative;
+
+        z-index: 10;
+
+        margin-top:50px;
+        margin-left: 10px;
+
+        color: var(--sec-text-dark-color);
+    }
+
+.event-channels-list {
+    width: 100%;
+    clear: both;
+}
+
+    .event-channels-list > ul {
+        list-style: none;
+    }
+
+        .event-channels-list > ul > li {
+            width: 100%;
+        }
+        
+            .div-channel {
+                width: 100%;
+                height: auto;
+            }
+
+                .div-channel > table {
+                    width: 100%;
+                    /* background-color: red; */
+                }
+
+                /* .div-channel > table td {
+                    border:1px solid black;
+                } */
+
+                .td-channel-img {
+                    width: 80px;
+                    height: 80px;
+                }
+            
+                    .div-channel-img {
+                        width: 80px;
+                        height: 80px;
+                        text-align: center;
+                    }
+                
+                        .div-channel-img >img {
+                            width: 80%;
+                            height: auto;
+                            margin-top:10%;
+                        }
+            
+                .event-list-info {
+            
+                }
+            
+                .channel-title {
+                    color:var(--main-text-dark-color); /* Old browsers */
+                    font-size: 18px;
+                }
+
+                .td-link-img {
+                    width: 50px;
+                    height: 50px;
+                    text-align: center;
+                }
+
+                    .br-link > img {
+                        width: 30px;
+                        height: 30px;
+                    }

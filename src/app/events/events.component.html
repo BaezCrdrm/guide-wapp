@@ -2,38 +2,48 @@
 <h2>Eventos</h2>
 </div>
 
-  <div class="row">
+  <div class="row container" >
      
     <div class="col-sm">
         <ul class="events">
             <li *ngFor="let event of events" (click)="onSelectEvent(event)">
               <!-- <span class="badge">{{event.ID}}</span> {{event.EventType.ID}} -->
 
-              <div id="event_{{event.ID}}">
-                <div class="div-type-img">
-                  <img *ngIf="event.EventType.ID==1" src="./assets/img/americano.png"/>
-                  <img *ngIf="event.EventType.ID==2" src="./assets/img/soccer.png"/>
-                  <img *ngIf="event.EventType.ID==3" src="./assets/img/basketball.png" />
-                  <img *ngIf="event.EventType.ID==4" src="./assets/img/baseball.png" />
-                  <img *ngIf="event.EventType.ID==5" src="./assets/img/musica.png" />
-                  <img *ngIf="event.EventType.ID==6" src="./assets/img/premios.png" />
-                  <img *ngIf="event.EventType.ID==7" src="./assets/img/gen.png" />
-                </div>
+              <div id="event_{{event.ID}}" class="div-event">
+                <table>
+                  <tr>
+                    <td>
+                      <div class="div-type-img">
+                        <img *ngIf="event.EventType.ID==1" src="./assets/img/americano.png" />
+                        <img *ngIf="event.EventType.ID==2" src="./assets/img/soccer.png" />
+                        <img *ngIf="event.EventType.ID==3" src="./assets/img/basketball.png" />
+                        <img *ngIf="event.EventType.ID==4" src="./assets/img/baseball.png" />
+                        <img *ngIf="event.EventType.ID==5" src="./assets/img/musica.png" />
+                        <img *ngIf="event.EventType.ID==6" src="./assets/img/premios.png" />
+                        <img *ngIf="event.EventType.ID==7" src="./assets/img/gen.png" />
+                      </div>
+                    </td>
 
-                <div>
-                  <div>
-                    <h2 class="event_title">{{event.Name}}</h2>
-                  </div>
+                    <td>
+                      <div class="event-list-info">
+                        <div>
+                          <h2 class="event-title">{{event.Name}}</h2>
+                        </div>
 
-                  <div>
-                    <span class="event_desc">{{event.Description}}</span>
-                  </div>
-                </div>
+                        <div class="event-desc">
+                          <span>{{event.Description}}</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </li>
         </ul>
       </div>
-      <div class="col-sm">
+      <div class="col">
+        
           <app-description [event]="selectedEvent" [eventDuration]="calculatedDuration" [timeCDFormat]="timeCDFormat"></app-description>
-      </div>
+      
+        </div>
   </div>

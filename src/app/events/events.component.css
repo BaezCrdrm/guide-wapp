@@ -1,25 +1,47 @@
 /* Events exclusive CSS styles */
-.event_title {
-    background-color: rgb(193, 13, 13) !important;
-    color:#FFF; /* Old browsers */
-    font-family: "fwc" !important;
-    width: 50%;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.events > li {
+  list-style: none;
+}
+
+  .div-event {
+    width: 100%;
+    height: auto;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  @font-face {
-    font-family: 'fwc';
-    src: url("/assets/Dusha.ttf");
+  .div-type-img {
+    width: 80px;
+    height: 80px;
+    text-align: center;
   }
+
+    .div-type-img >img {
+      width: 80%;
+      height: auto;
+      margin-top:10%;
+    }
+
+  .event-list-info {
+
+  }
+
+    .event-title {
+      color:var(--main-text-dark-color); /* Old browsers */
+      font-size: 21px;
+    }
+
+    .event-desc {
+      white-space: nowrap; 
+      width: 285px; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+      .event-desc > span {
+        font-size: 13px;
+        color: var(--sec-text-gray-color);
+      }
