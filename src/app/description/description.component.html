@@ -32,14 +32,20 @@
         <div class="div-channel">
           <table>
             <tr>
-              <td>
+              <td class="td-channel-img">
                 <div class="div-channel-img">
                   <img src="{{channel.Img}}" />
                 </div>
-                </td>
+              </td>
 
               <td>
                 <p class="channel-title">{{channel.Name}}</p>
+              </td>
+
+              <td class="td-link-img" *ngIf="channel.Url">
+                <a class="br-link" target="_blank" href="{{channel.Url}}">
+                  <img src="./assets/img/world_d.png" />
+                </a>
               </td>
             </tr>
           </table>
