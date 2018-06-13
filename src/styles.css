@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --main-text-dark-color: #333333;
+    --sec-text-gray-color: #999999;
+}
+
+* {
+    font-family: Helvetica, Arial, sans-serif;
+}
