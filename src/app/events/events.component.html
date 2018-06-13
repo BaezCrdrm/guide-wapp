@@ -3,6 +3,7 @@
 </div>
 
   <div class="row">
+     
     <div class="col-sm">
         <ul class="events">
             <li *ngFor="let event of events" (click)="onSelectEvent(event)">
@@ -10,8 +11,8 @@
 
               <div id="event_{{event.ID}}">
                 <div class="div-type-img">
-                  <img *ngIf="event.EventType.ID==1" src="./assets/img/americano.png" class="img-thumbnail"/>
-                  <img *ngIf="event.EventType.ID==2" src="./assets/img/soccer.png" class="img-thumbnail" />
+                  <img *ngIf="event.EventType.ID==1" src="./assets/img/americano.png"/>
+                  <img *ngIf="event.EventType.ID==2" src="./assets/img/soccer.png"/>
                   <img *ngIf="event.EventType.ID==3" src="./assets/img/basketball.png" />
                   <img *ngIf="event.EventType.ID==4" src="./assets/img/baseball.png" />
                   <img *ngIf="event.EventType.ID==5" src="./assets/img/musica.png" />
@@ -34,5 +35,5 @@
       </div>
       <div class="col-sm">
           <app-description [event]="selectedEvent" [eventDuration]="calculatedDuration" [timeCDFormat]="timeCDFormat"></app-description>
-        </div>
+      </div>
   </div>

@@ -1,0 +1,27 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    
+    }
+    
+#sidebar {
+    z-index:1;
+    position: absolute;
+  /*  padding-top: 2px;*/
+  /*  top: 12.67%;*/
+  width: 200px;
+    height:100% ;
+    overflow-y: hidden;
+    background: white;
+    left: -200px;
+    
+ 
+    }
+    #sidebar.active {
+        left: 0px;
+        }
+    #sidebar ul li{
+        padding: 8px;
+        }
+
+     
